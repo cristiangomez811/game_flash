@@ -33,9 +33,12 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Football Brain</title>
+        <link rel="stylesheet" href="css/animate.css">
+
+        <title></title>
     </head>
-    <body class="fondo">
+    
+    <body class="fondo fondoPrincipal" id="bodyIndex">
         <!--
         <div class="app">
             <h1>Apache Cordova</h1>
@@ -45,13 +48,47 @@
             </div>
         </div>
         -->
-
-        <!-- <img src="img/Inicio_06.png" id="5" class="centrado" i> -->
-
-        <div  class="centrado">
-            <img src="img/Inicio_06.png" id="button">
-        </div>        
-        
+    
+        <div class="centrado animated jello" id="divPrincipal">
+    
+            <img src="img/inicio-2.png" class="opcionRectangular" id="iniciar">
+    
+        </div>
+    
+        <div class="ocultar" id="divMenu">
+    
+            <div class="margin">
+    
+                <a href="trivia.html">
+                    <img src="img/seleccion-2.png" class="opcionRectangular" id="menu1">
+                </a>
+    
+            </div>
+    
+            <div class="margin">
+    
+                <a href="recuerda.html">
+                    <img src="img/seleccion-3.png" class="opcionRectangular" id="menu2">
+                </a>
+    
+            </div>
+    
+            <div class="margin">
+    
+                <a href="resultados.html">
+                    <img src="img/seleccion-4.png" class="opcionRectangular" id="menu3">
+                </a>
+    
+            </div>
+    
+            <div class="back">
+    
+                <img src="img/back.png" id="backMenu">
+    
+            </div>
+    
+        </div>
+    
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>

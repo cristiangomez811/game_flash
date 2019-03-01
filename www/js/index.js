@@ -20,6 +20,9 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.getElementById("iniciar").addEventListener("click", mostrarMenu);
+        document.getElementById("backMenu").addEventListener("click", mostrarPrincipal);
+        document.getElementById("menu1").addEventListener("click", mostrarTrivia1);
     },
 
     // deviceready Event Handler
@@ -42,5 +45,25 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function ocultarIndex(){
+
+    document.getElementById("divPrincipal").className = "ocultar";
+    document.getElementById("divMenu").className = "ocultar";
+}
+
+function mostrarMenu(){
+
+    ocultarIndex();
+    document.getElementById("bodyIndex").className = "fondo fondoMenu";
+    document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
+}
+
+function mostrarPrincipal(){
+
+    ocultarIndex();
+    document.getElementById("bodyIndex").className = "fondo fondoPrincipal";
+    document.getElementById("divPrincipal").className = "centrado animated jello";
+}
 
 app.initialize();
