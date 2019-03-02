@@ -66,7 +66,9 @@ var app = {
         document.getElementById("resultado_53").addEventListener("click", mostrarMenu);
         document.getElementById("resultado_54").addEventListener("click", mostrarMenu);
         document.getElementById("menu3").addEventListener("click", mostrarRecuerda);
-
+        document.getElementById("scoreIcon").addEventListener("click", mostrarPuntaje);
+        document.getElementById("backPuntaje").addEventListener("click", mostrarMenu);
+        document.getElementById("backRecuerda").addEventListener("click", mostrarMenu);
     },
 
     // deviceready Event Handler
@@ -105,6 +107,7 @@ function ocultar(){
     document.getElementById("resultado4").className = "ocultar";
     document.getElementById("resultado5").className = "ocultar";
     document.getElementById("recuerda").className = "ocultar";
+    document.getElementById("interfazPuntaje").className = "ocultar";
 }
 
 function mostrarMenu(){
@@ -196,6 +199,13 @@ function mostrarRecuerda(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoRecuerda";
     document.getElementById("recuerda").className = "centroTrivia animated flash";
+}
+
+function mostrarPuntaje(){
+
+    ocultar();
+    document.getElementById("bodyIndex").className = "fondo fondoMenu";
+    document.getElementById("interfazPuntaje").className = "centroMenu animated fadeInDownBig";
 }
 
 app.initialize();
