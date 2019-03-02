@@ -157,6 +157,11 @@ h1 {
     background: url("../img/Trivia 5/trivia-1.png");
 }
 
+.fondoResultado1{
+
+    background: url("../img/Resultado 1/Resultado-1.png");
+}
+
 .back{
 
     position: relative;

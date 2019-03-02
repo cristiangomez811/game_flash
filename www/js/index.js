@@ -40,10 +40,10 @@ var app = {
         document.getElementById("trivia_42").addEventListener("click", mostrarTrivia5);
         document.getElementById("trivia_43").addEventListener("click", mostrarTrivia5);
         document.getElementById("trivia_44").addEventListener("click", mostrarTrivia5);
-        //document.getElementById("trivia_51").addEventListener("click", mostrarMenu);
-        //document.getElementById("trivia_52").addEventListener("click", mostrarMenu);
-        //document.getElementById("trivia_53").addEventListener("click", mostrarMenu);
-        //document.getElementById("trivia_54").addEventListener("click", mostrarMenu);
+        document.getElementById("trivia_51").addEventListener("click", mostrarResultado1);
+        document.getElementById("trivia_52").addEventListener("click", mostrarResultado1);
+        document.getElementById("trivia_53").addEventListener("click", mostrarResultado1);
+        document.getElementById("trivia_54").addEventListener("click", mostrarResultado1);
     },
 
     // deviceready Event Handler
@@ -125,6 +125,13 @@ function mostrarTrivia5(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoTrivia5";
     document.getElementById("trivia5").className = "centroTrivia";
+}
+
+function mostrarResultado1(){
+
+    ocultar();
+    document.getElementById("bodyIndex").className = "fondo fondoResultado1";
+    document.getElementById("resultado1").className = "centroTrivia";
 }
 
 app.initialize();
