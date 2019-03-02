@@ -18,8 +18,9 @@
     under the License.
 -->
 <html>
-    <head>
-        <!--
+
+<head>
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -28,18 +29,19 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" href="css/animate.css">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <title>Football Brain</title>
+</head>
 
-        <title></title>
-    </head>
-    
-    <body class="fondo fondoPrincipal" id="bodyIndex">
-        <!--
+<body class="fondo fondoPrincipal" id="bodyIndex">
+    <!--
         <div class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
@@ -48,48 +50,103 @@
             </div>
         </div>
         -->
-    
-        <div class="centrado animated jello" id="divPrincipal">
-    
-            <img src="img/inicio-2.png" class="opcionRectangular" id="iniciar">
-    
+
+    <div class="centrado animated jello" id="divPrincipal">
+
+        <img src="img/inicio-2.png" class="opcionRectangular" id="iniciar">
+
+    </div>
+
+    <div class="ocultar" id="divMenu">
+
+        <div class="margin">
+
+            <img src="img/seleccion-2.png" class="opcionRectangular" id="menu1">
+
         </div>
-    
-        <div class="ocultar" id="divMenu">
-    
-            <div class="margin">
-    
-                <a href="trivia.html">
-                    <img src="img/seleccion-2.png" class="opcionRectangular" id="menu1">
-                </a>
-    
-            </div>
-    
-            <div class="margin">
-    
-                <a href="recuerda.html">
-                    <img src="img/seleccion-3.png" class="opcionRectangular" id="menu2">
-                </a>
-    
-            </div>
-    
-            <div class="margin">
-    
-                <a href="resultados.html">
-                    <img src="img/seleccion-4.png" class="opcionRectangular" id="menu3">
-                </a>
-    
-            </div>
-    
-            <div class="back">
-    
-                <img src="img/back.png" id="backMenu">
-    
-            </div>
-    
+
+        <div class="margin">
+
+            <img src="img/seleccion-3.png" class="opcionRectangular" id="menu2">
+
         </div>
+
+        <div class="margin">
+
+            <img src="img/seleccion-4.png" class="opcionRectangular" id="menu3">
+
+        </div>
+
+        <div class="back">
+
+            <img src="img/back.png" id="backMenu">
+
+        </div>
+
+    </div>
+
+    <div  class="ocultar" id="trivia1">
+            
+        <img src="img/Trivia 1/trivia-2.png" class="opcionRectangularTrivia" id="trivia_11">
+
+        <img src="img/Trivia 1/trivia-3.png"  class="opcionRectangularTrivia" id="trivia_12">
+
+        <img src="img/Trivia 1/trivia-4.png"  class="opcionRectangularTrivia" id="trivia_13">
+
+        <img src="img/Trivia 1/trivia-5.png"  class="opcionRectangularTrivia" id="trivia_14">
+
+    </div>
+
+    <div  class="ocultar" id="trivia2">
+            
+        <img src="img/Trivia 2/trivia-2.png" class="opcionRectangularTrivia" id="trivia_21">
     
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+        <img src="img/Trivia 2/trivia-3.png"  class="opcionRectangularTrivia" id="trivia_22">
+    
+        <img src="img/Trivia 2/trivia-4.png"  class="opcionRectangularTrivia" id="trivia_23">
+    
+        <img src="img/Trivia 2/trivia-5.png"  class="opcionRectangularTrivia" id="trivia_24">
+    
+    </div>
+
+    <div  class="ocultar" id="trivia3">
+            
+        <img src="img/Trivia 3/trivia-2.png" class="opcionRectangularTrivia" id="trivia_31">
+    
+        <img src="img/Trivia 3/trivia-3.png"  class="opcionRectangularTrivia" id="trivia_32">
+    
+        <img src="img/Trivia 3/trivia-4.png"  class="opcionRectangularTrivia" id="trivia_33">
+    
+        <img src="img/Trivia 3/trivia-5.png"  class="opcionRectangularTrivia" id="trivia_34">
+    
+    </div>
+
+    <div  class="ocultar" id="trivia4">
+            
+        <img src="img/Trivia 4/trivia-2.png" class="opcionRectangularTrivia" id="trivia_41">
+    
+        <img src="img/Trivia 4/trivia-3.png"  class="opcionRectangularTrivia" id="trivia_42">
+    
+        <img src="img/Trivia 4/trivia-4.png"  class="opcionRectangularTrivia" id="trivia_43">
+    
+        <img src="img/Trivia 4/trivia-5.png"  class="opcionRectangularTrivia" id="trivia_44">
+    
+    </div>
+
+    <div  class="ocultar" id="trivia5">
+            
+        <img src="img/Trivia 5/trivia-2.png" class="opcionRectangularTrivia" id="trivia_51">
+    
+        <img src="img/Trivia 5/trivia-3.png"  class="opcionRectangularTrivia" id="trivia_52">
+    
+        <img src="img/Trivia 5/trivia-4.png"  class="opcionRectangularTrivia" id="trivia_53">
+    
+        <img src="img/Trivia 5/trivia-5.png"  class="opcionRectangularTrivia" id="trivia_54">
+    
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
 </html>
