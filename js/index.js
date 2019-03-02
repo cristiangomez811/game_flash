@@ -40,10 +40,33 @@ var app = {
         document.getElementById("trivia_42").addEventListener("click", mostrarTrivia5);
         document.getElementById("trivia_43").addEventListener("click", mostrarTrivia5);
         document.getElementById("trivia_44").addEventListener("click", mostrarTrivia5);
-        document.getElementById("trivia_51").addEventListener("click", mostrarResultado1);
-        document.getElementById("trivia_52").addEventListener("click", mostrarResultado1);
-        document.getElementById("trivia_53").addEventListener("click", mostrarResultado1);
-        document.getElementById("trivia_54").addEventListener("click", mostrarResultado1);
+        document.getElementById("trivia_51").addEventListener("click", mostrarMenu);
+        document.getElementById("trivia_52").addEventListener("click", mostrarMenu);
+        document.getElementById("trivia_53").addEventListener("click", mostrarMenu);
+        document.getElementById("trivia_54").addEventListener("click", mostrarMenu);
+        document.getElementById("menu2").addEventListener("click", mostrarResultado1);
+        document.getElementById("resultado_11").addEventListener("click", mostrarResultado2);
+        document.getElementById("resultado_12").addEventListener("click", mostrarResultado2);
+        document.getElementById("resultado_13").addEventListener("click", mostrarResultado2);
+        document.getElementById("resultado_14").addEventListener("click", mostrarResultado2);
+        document.getElementById("resultado_21").addEventListener("click", mostrarResultado3);
+        document.getElementById("resultado_22").addEventListener("click", mostrarResultado3);
+        document.getElementById("resultado_23").addEventListener("click", mostrarResultado3);
+        document.getElementById("resultado_24").addEventListener("click", mostrarResultado3);
+        document.getElementById("resultado_31").addEventListener("click", mostrarResultado4);
+        document.getElementById("resultado_32").addEventListener("click", mostrarResultado4);
+        document.getElementById("resultado_33").addEventListener("click", mostrarResultado4);
+        document.getElementById("resultado_34").addEventListener("click", mostrarResultado4);
+        document.getElementById("resultado_41").addEventListener("click", mostrarResultado5);
+        document.getElementById("resultado_42").addEventListener("click", mostrarResultado5);
+        document.getElementById("resultado_43").addEventListener("click", mostrarResultado5);
+        document.getElementById("resultado_44").addEventListener("click", mostrarResultado5);
+        document.getElementById("resultado_51").addEventListener("click", mostrarMenu);
+        document.getElementById("resultado_52").addEventListener("click", mostrarMenu);
+        document.getElementById("resultado_53").addEventListener("click", mostrarMenu);
+        document.getElementById("resultado_54").addEventListener("click", mostrarMenu);
+        document.getElementById("menu3").addEventListener("click", mostrarRecuerda);
+
     },
 
     // deviceready Event Handler
@@ -76,6 +99,12 @@ function ocultar(){
     document.getElementById("trivia3").className = "ocultar";
     document.getElementById("trivia4").className = "ocultar";
     document.getElementById("trivia5").className = "ocultar";
+    document.getElementById("resultado1").className = "ocultar";
+    document.getElementById("resultado2").className = "ocultar";
+    document.getElementById("resultado3").className = "ocultar";
+    document.getElementById("resultado4").className = "ocultar";
+    document.getElementById("resultado5").className = "ocultar";
+    document.getElementById("recuerda").className = "ocultar";
 }
 
 function mostrarMenu(){
@@ -96,42 +125,77 @@ function mostrarTrivia1(){
 
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoTrivia1";
-    document.getElementById("trivia1").className = "centroTrivia";
+    document.getElementById("trivia1").className = "centroTrivia animated bounce";
 }
 
 function mostrarTrivia2(){
 
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
-    document.getElementById("trivia2").className = "centroTrivia";
+    document.getElementById("trivia2").className = "centroTrivia animated bounce";
 }
 
 function mostrarTrivia3(){
 
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoTrivia3";
-    document.getElementById("trivia3").className = "centroTrivia";
+    document.getElementById("trivia3").className = "centroTrivia animated bounce";
 }
 
 function mostrarTrivia4(){
 
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoTrivia4";
-    document.getElementById("trivia4").className = "centroTrivia";
+    document.getElementById("trivia4").className = "centroTrivia animated bounce";
 }
 
 function mostrarTrivia5(){
 
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoTrivia5";
-    document.getElementById("trivia5").className = "centroTrivia";
+    document.getElementById("trivia5").className = "centroTrivia animated bounce";
 }
 
 function mostrarResultado1(){
 
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoResultado1";
-    document.getElementById("resultado1").className = "centroTrivia";
+    document.getElementById("resultado1").className = "centroTrivia animated heartBeat";
+}
+
+function mostrarResultado2(){
+
+    ocultar();
+    document.getElementById("bodyIndex").className = "fondo fondoResultado2";
+    document.getElementById("resultado2").className = "centroTrivia animated heartBeat";
+}
+
+function mostrarResultado3(){
+
+    ocultar();
+    document.getElementById("bodyIndex").className = "fondo fondoResultado3";
+    document.getElementById("resultado3").className = "centroTrivia animated heartBeat";
+}
+
+function mostrarResultado4(){
+
+    ocultar();
+    document.getElementById("bodyIndex").className = "fondo fondoResultado4";
+    document.getElementById("resultado4").className = "centroTrivia animated heartBeat";
+}
+
+function mostrarResultado5(){
+
+    ocultar();
+    document.getElementById("bodyIndex").className = "fondo fondoResultado5";
+    document.getElementById("resultado5").className = "centroTrivia animated heartBeat";
+}
+
+function mostrarRecuerda(){
+
+    ocultar();
+    document.getElementById("bodyIndex").className = "fondo fondoRecuerda";
+    document.getElementById("recuerda").className = "centroTrivia animated flash";
 }
 
 app.initialize();

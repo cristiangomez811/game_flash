@@ -115,12 +115,6 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.fondo{
-
-    background-repeat: no-repeat;
-    background-size: 360px 616px;
-}
-
 .fondoPrincipal{
 
     background: url("../img/inicio.png");
@@ -162,6 +156,47 @@ h1 {
     background: url("../img/Resultado 1/Resultado-1.png");
 }
 
+.fondoResultado2{
+
+    background: url("../img/Resultado 2/Resultado-1.png");
+}
+
+.fondoResultado3{
+
+    background: url("../img/Resultado 3/Resultado-1.png");
+}
+
+.fondoResultado4{
+
+    background: url("../img/Resultado 4/Resultado-1.png");
+}
+
+.fondoResultado5{
+
+    background: url("../img/Resultado 5/Resultado-1.png");
+}
+
+.fondoRecuerda{
+
+    background: url("../img/Recuerda.png");
+}
+
+.fondo{
+
+    background-repeat: no-repeat;
+    background-size: 360px 616px;
+}
+
+.imagenResultados{
+
+    opacity: 0.8;
+    -webkit-filter: contrast(200%);
+    filter: contrast(200%);
+    height: 150px;
+    width: 150px;
+    border-radius: 120px;
+}
+
 .back{
 
     position: relative;
@@ -172,6 +207,11 @@ h1 {
 .ocultar{
     
     display: none;
+}
+
+.mostrar{
+
+    display: block;
 }
 
 .centroMenu{
@@ -201,11 +241,26 @@ h1 {
 .imagenRecuerda1{
 
     position: relative;
-    top: 40vh;
+    top: 10vh;
     width: 50vw;
     text-align: center; 
 }
 
+.imagenRecuerda2{
+
+    position: relative;
+    top: 25vh;
+    width: 65vw;
+    text-align: center; 
+}
+
+.imagenRecuerda3{
+
+    position: relative;
+    top: 10vh;
+    width: 150vw;
+    text-align: center; 
+}
 
 .opcionRectangular{
 
