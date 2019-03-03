@@ -69,6 +69,8 @@ var app = {
         document.getElementById("scoreIcon").addEventListener("click", mostrarPuntaje);
         document.getElementById("backPuntaje").addEventListener("click", mostrarMenu);
         document.getElementById("backRecuerda").addEventListener("click", mostrarMenu);
+        document.getElementById("credits").addEventListener("click", mostrarCreditos);
+        document.getElementById("backCredito").addEventListener("click", mostrarMenu);
     },
 
     // deviceready Event Handler
@@ -108,6 +110,7 @@ function ocultar(){
     document.getElementById("resultado5").className = "ocultar";
     document.getElementById("recuerda").className = "ocultar";
     document.getElementById("interfazPuntaje").className = "ocultar";
+    document.getElementById("interfazCreditos").className = "ocultar";
 }
 
 function mostrarMenu(){
@@ -206,6 +209,13 @@ function mostrarPuntaje(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoMenu";
     document.getElementById("interfazPuntaje").className = "centroMenu animated fadeInDownBig";
+}
+
+function mostrarCreditos(){
+
+    ocultar();
+    document.getElementById("bodyIndex").className = "fondo fondoPrincipal";
+    document.getElementById("interfazCreditos").className = "centroMenu animated fadeInDownBig";
 }
 
 app.initialize();
