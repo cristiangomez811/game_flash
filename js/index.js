@@ -94,6 +94,8 @@ var app = {
 
 function ocultar(){
 
+    document.getElementById("correcto").className = "ocultar";
+    document.getElementById("incorrecto").className = "ocultar";
     document.getElementById("divPrincipal").className = "ocultar";
     document.getElementById("divMenu").className = "ocultar";
     document.getElementById("trivia1").className = "ocultar";
@@ -133,30 +135,55 @@ function mostrarTrivia1(){
 
 function mostrarTrivia2(){
 
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
-    document.getElementById("trivia2").className = "centroTrivia animated bounce";
+    if (this.id == "trivia_14") {      
+        document.getElementById("correcto").classList.remove("ocultar");
+    }else{
+        document.getElementById("incorrecto").classList.remove("ocultar");
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
+        document.getElementById("trivia2").className = "centroTrivia animated bounce";
+    }, 2000);
 }
 
 function mostrarTrivia3(){
-
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoTrivia3";
-    document.getElementById("trivia3").className = "centroTrivia animated bounce";
+    if (this.id == "trivia_21") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    } else {
+        document.getElementById("incorrecto").classList.remove("ocultar");
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
+        document.getElementById("trivia3").className = "centroTrivia animated bounce";
+    }, 2000);
 }
 
 function mostrarTrivia4(){
-
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoTrivia4";
-    document.getElementById("trivia4").className = "centroTrivia animated bounce";
+    if (this.id == "trivia_34") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    } else {
+        document.getElementById("incorrecto").classList.remove("ocultar");
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
+        document.getElementById("trivia4").className = "centroTrivia animated bounce";
+    }, 2000);
 }
 
 function mostrarTrivia5(){
-
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoTrivia5";
-    document.getElementById("trivia5").className = "centroTrivia animated bounce";
+    if (this.id == "trivia_42") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    } else {
+        document.getElementById("incorrecto").classList.remove("ocultar");
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
+        document.getElementById("trivia5").className = "centroTrivia animated bounce";
+    }, 2000);
 }
 
 function mostrarResultado1(){
@@ -208,4 +235,10 @@ function mostrarPuntaje(){
     document.getElementById("interfazPuntaje").className = "centroMenu animated fadeInDownBig";
 }
 
+function modal() {
+   var modal = document.getElementById("resultados-modal").addEventListener("click", function() {
+       var ocultar = this.getElementById("ocultar");
+   });
+   
+}
 app.initialize();
