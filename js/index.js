@@ -66,6 +66,7 @@ var app = {
         document.getElementById("resultado_53").addEventListener("click", mostrarMenu);
         document.getElementById("resultado_54").addEventListener("click", mostrarMenu);
         document.getElementById("menu3").addEventListener("click", mostrarRecuerda);
+        document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("scoreIcon").addEventListener("click", mostrarPuntaje);
         document.getElementById("backPuntaje").addEventListener("click", mostrarMenu);
         document.getElementById("backRecuerda").addEventListener("click", mostrarMenu);
@@ -155,7 +156,7 @@ function mostrarTrivia3(){
     }
     setTimeout(() => {
         ocultar();
-        document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
+        document.getElementById("bodyIndex").className = "fondo fondoTrivia3";
         document.getElementById("trivia3").className = "centroTrivia animated bounce";
     }, 2000);
 }
@@ -168,7 +169,7 @@ function mostrarTrivia4(){
     }
     setTimeout(() => {
         ocultar();
-        document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
+        document.getElementById("bodyIndex").className = "fondo fondoTrivia4";
         document.getElementById("trivia4").className = "centroTrivia animated bounce";
     }, 2000);
 }
@@ -181,7 +182,7 @@ function mostrarTrivia5(){
     }
     setTimeout(() => {
         ocultar();
-        document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
+        document.getElementById("bodyIndex").className = "fondo fondoTrivia5";
         document.getElementById("trivia5").className = "centroTrivia animated bounce";
     }, 2000);
 }
@@ -226,6 +227,24 @@ function mostrarRecuerda(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoRecuerda";
     document.getElementById("recuerda").className = "centroTrivia animated flash";
+    setTimeout(() => {
+        document.getElementById("recuerda_11").className = "esconder";
+        document.getElementById("recuerda_12").className = "esconder";
+        document.getElementById("recuerda_13").className = "esconder";
+    }, 3000);
+}
+
+function mostrarFoto(){
+    // if (this.id == "recuerda_11") {
+    if (true) {
+        document.getElementById("recuerda_11").classList.remove("esconder");
+    }
+    if (this.id == "recuerda_12") {
+        document.getElementById("recuerda_11").classList.remove("esconder");
+    }
+    if (this.id == "recuerda_13") {
+        document.getElementById("recuerda_11").classList.remove("esconder");
+    }
 }
 
 function mostrarPuntaje(){

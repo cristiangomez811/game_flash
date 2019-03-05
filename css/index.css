@@ -210,6 +210,10 @@ h1 {
     display: none;
 }
 
+.esconder{
+    visibility: hidden;
+}
+
 .mostrar{
 
     display: block;
