@@ -21,7 +21,7 @@ var app = {
     initialize: function() {
         
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-        document.getElementById("iniciar").addEventListener("click", mostrarMenu);
+        document.getElementById("iniciar").addEventListener("click", mostrarMenuBack);
         document.getElementById("backMenu").addEventListener("click", mostrarPrincipal);
         document.getElementById("menu1").addEventListener("click", mostrarTrivia1);
         document.getElementById("trivia_11").addEventListener("click", mostrarTrivia2);
@@ -67,9 +67,11 @@ var app = {
         document.getElementById("resultado_54").addEventListener("click", mostrarMenu);
         document.getElementById("menu3").addEventListener("click", mostrarRecuerda);
         document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
+        document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
+        document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("scoreIcon").addEventListener("click", mostrarPuntaje);
-        document.getElementById("backPuntaje").addEventListener("click", mostrarMenu);
-        document.getElementById("backRecuerda").addEventListener("click", mostrarMenu);
+        document.getElementById("backPuntaje").addEventListener("click", mostrarMenuBack);
+        document.getElementById("backRecuerda").addEventListener("click", mostrarMenuBack);
     },
 
     // deviceready Event Handler
@@ -114,10 +116,25 @@ function ocultar(){
 }
 
 function mostrarMenu(){
+    if (this.id == "resultado_51") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    } else if (this.id == "trivia_51") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    }else {
+        document.getElementById("incorrecto").classList.remove("ocultar");
 
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoMenu";
-    document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoMenu";
+        document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
+    }, 2000);
+
+}
+function mostrarMenuBack(){
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoMenu";
+        document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
 }
 
 function mostrarPrincipal(){
@@ -195,31 +212,55 @@ function mostrarResultado1(){
 }
 
 function mostrarResultado2(){
-
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoResultado2";
-    document.getElementById("resultado2").className = "centroTrivia animated heartBeat";
+    if (this.id == "resultado_12") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    } else {
+        document.getElementById("incorrecto").classList.remove("ocultar");
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoResultado2";
+        document.getElementById("resultado2").className = "centroTrivia animated heartBeat";
+    }, 2000);
 }
 
 function mostrarResultado3(){
-
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoResultado3";
-    document.getElementById("resultado3").className = "centroTrivia animated heartBeat";
+    if (this.id == "resultado_23") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    } else {
+        document.getElementById("incorrecto").classList.remove("ocultar");
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoResultado3";
+        document.getElementById("resultado3").className = "centroTrivia animated heartBeat";
+    }, 2000);
 }
 
 function mostrarResultado4(){
-
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoResultado4";
-    document.getElementById("resultado4").className = "centroTrivia animated heartBeat";
+    if (this.id == "resultado_34") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    } else {
+        document.getElementById("incorrecto").classList.remove("ocultar");
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoResultado4";
+        document.getElementById("resultado4").className = "centroTrivia animated heartBeat";
+    }, 2000);
 }
 
 function mostrarResultado5(){
-
-    ocultar();
-    document.getElementById("bodyIndex").className = "fondo fondoResultado5";
-    document.getElementById("resultado5").className = "centroTrivia animated heartBeat";
+    if (this.id == "resultado_43") {
+        document.getElementById("correcto").classList.remove("ocultar");
+    } else {
+        document.getElementById("incorrecto").classList.remove("ocultar");
+    }
+    setTimeout(() => {
+        ocultar();
+        document.getElementById("bodyIndex").className = "fondo fondoResultado5";
+        document.getElementById("resultado5").className = "centroTrivia animated heartBeat";
+    }, 2000);
 }
 
 function mostrarRecuerda(){
@@ -227,6 +268,10 @@ function mostrarRecuerda(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoRecuerda";
     document.getElementById("recuerda").className = "centroTrivia animated flash";
+    document.getElementById("recuerda_11").classList.remove("esconder");
+    document.getElementById("recuerda_12").classList.remove("esconder");
+    document.getElementById("recuerda_13").classList.remove("esconder");
+
     setTimeout(() => {
         document.getElementById("recuerda_11").className = "esconder";
         document.getElementById("recuerda_12").className = "esconder";
@@ -239,10 +284,12 @@ function mostrarFoto(){
     if (true) {
         document.getElementById("recuerda_11").classList.remove("esconder");
     }
-    if (this.id == "recuerda_12") {
-        document.getElementById("recuerda_11").classList.remove("esconder");
+    // if (this.id == "recuerda_12") {
+    if (true) {
+            document.getElementById("recuerda_11").classList.remove("esconder");
     }
-    if (this.id == "recuerda_13") {
+    if (true) {
+    // if (this.id == "recuerda_13") {
         document.getElementById("recuerda_11").classList.remove("esconder");
     }
 }
