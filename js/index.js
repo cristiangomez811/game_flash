@@ -74,7 +74,7 @@ var app = {
         document.getElementById("backPuntaje").addEventListener("click", mostrarMenu);
         document.getElementById("backRecuerda").addEventListener("click", mostrarMenu);
         document.getElementById("credits").addEventListener("click", mostrarCreditos);
-        document.getElementById("backCredito").addEventListener("click", mostrarMenu);
+        document.getElementById("backCredito").addEventListener("click", mostrarPrincipal);
 
         document.getElementById("backPuntaje").addEventListener("click", mostrarMenuBack);
         document.getElementById("backRecuerda").addEventListener("click", mostrarMenuBack);
@@ -124,7 +124,7 @@ function ocultar(){
 }
 
 function mostrarMenu(){
-    if (this.id == "resultado_51") {
+    if (this.id == "resultado_54") {
         document.getElementById("correcto").classList.remove("ocultar");
     } else if (this.id == "trivia_54") {
         document.getElementById("correcto").classList.remove("ocultar");
@@ -361,34 +361,121 @@ function mostrarTrivia5(){
 function mostrarResultado1(){
 
     ocultar();
+
+    var numeroRandom = getRandom();
+    var opcion1 = numeroRandom[0]+1;
+    var opcion2 = numeroRandom[1]+1;
+    var opcion3 = numeroRandom[2]+1;
+    var opcion4 = numeroRandom[3]+1;
+    
+
+    document.getElementById("resultado_11").src = "img/Resultado 1/resultado-"+opcion1+".png";
+    document.getElementById("resultado_12").src = "img/Resultado 1/resultado-"+opcion2+".png";
+    document.getElementById("resultado_13").src = "img/Resultado 1/resultado-"+opcion3+".png";
+    document.getElementById("resultado_14").src = "img/Resultado 1/resultado-"+opcion4+".png";
+
+    if (opcion1 == 3){
+        document.getElementById("resultado_11").id = "resultado_10";
+        document.getElementById("resultado_14").id = "resultado_11";
+        document.getElementById("resultado_10").id = "resultado_14";
+    }
+    else if (opcion2 == 3){
+        document.getElementById("resultado_12").id = "resultado_10";
+        document.getElementById("resultado_14").id = "resultado_12";
+        document.getElementById("resultado_10").id = "resultado_14";
+    }
+    else if (opcion3 == 3){
+        document.getElementById("resultado_13").id = "resultado_10";
+        document.getElementById("resultado_14").id = "resultado_13";
+        document.getElementById("resultado_10").id = "resultado_14";
+    }   
+
     document.getElementById("bodyIndex").className = "fondo fondoResultado1";
     document.getElementById("resultado1").className = "centroTrivia animated heartBeat";
 }
 
 function mostrarResultado2(){
-    if (this.id == "resultado_12") {
+    if (this.id == "resultado_14") {
         document.getElementById("correcto").classList.remove("ocultar");
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
     setTimeout(() => {
         ocultar();
+
+        var numeroRandom = getRandom();
+        var opcion1 = numeroRandom[0]+1;
+        var opcion2 = numeroRandom[1]+1;
+        var opcion3 = numeroRandom[2]+1;
+        var opcion4 = numeroRandom[3]+1;
+        
+
+        document.getElementById("resultado_21").src = "img/Resultado 2/resultado-"+opcion1+".png";
+        document.getElementById("resultado_22").src = "img/Resultado 2/resultado-"+opcion2+".png";
+        document.getElementById("resultado_23").src = "img/Resultado 2/resultado-"+opcion3+".png";
+        document.getElementById("resultado_24").src = "img/Resultado 2/resultado-"+opcion4+".png";
+
+        if (opcion1 == 4){
+            document.getElementById("resultado_21").id = "resultado_20";
+            document.getElementById("resultado_24").id = "resultado_21";
+            document.getElementById("resultado_20").id = "resultado_24";
+        }
+        else if (opcion2 == 4){
+            document.getElementById("resultado_22").id = "resultado_20";
+            document.getElementById("resultado_24").id = "resultado_22";
+            document.getElementById("resultado_20").id = "resultado_24";
+        }
+        else if (opcion3 == 4){
+            document.getElementById("resultado_23").id = "resultado_20";
+            document.getElementById("resultado_24").id = "resultado_23";
+            document.getElementById("resultado_20").id = "resultado_24";
+        }   
+
         document.getElementById("bodyIndex").className = "fondo fondoResultado2";
         document.getElementById("resultado2").className = "centroTrivia animated heartBeat";
-    }, 2000);
+    }, 500);
 }
 
 function mostrarResultado3(){
-    if (this.id == "resultado_23") {
+    if (this.id == "resultado_24") {
         document.getElementById("correcto").classList.remove("ocultar");
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
     setTimeout(() => {
         ocultar();
+
+        var numeroRandom = getRandom();
+        var opcion1 = numeroRandom[0]+1;
+        var opcion2 = numeroRandom[1]+1;
+        var opcion3 = numeroRandom[2]+1;
+        var opcion4 = numeroRandom[3]+1;
+        
+
+        document.getElementById("resultado_31").src = "img/Resultado 3/resultado-"+opcion1+".png";
+        document.getElementById("resultado_32").src = "img/Resultado 3/resultado-"+opcion2+".png";
+        document.getElementById("resultado_33").src = "img/Resultado 3/resultado-"+opcion3+".png";
+        document.getElementById("resultado_34").src = "img/Resultado 3/resultado-"+opcion4+".png";
+
+        if (opcion1 == 5){
+            document.getElementById("resultado_31").id = "resultado_30";
+            document.getElementById("resultado_34").id = "resultado_31";
+            document.getElementById("resultado_30").id = "resultado_34";
+        }
+        else if (opcion2 == 5){
+            document.getElementById("resultado_32").id = "resultado_30";
+            document.getElementById("resultado_34").id = "resultado_32";
+            document.getElementById("resultado_30").id = "resultado_34";
+        }
+        else if (opcion3 == 5){
+            document.getElementById("resultado_33").id = "resultado_30";
+            document.getElementById("resultado_34").id = "resultado_33";
+            document.getElementById("resultado_30").id = "resultado_34";
+        }   
+
         document.getElementById("bodyIndex").className = "fondo fondoResultado3";
         document.getElementById("resultado3").className = "centroTrivia animated heartBeat";
-    }, 2000);
+    }, 500);
 }
 
 function mostrarResultado4(){
@@ -399,22 +486,80 @@ function mostrarResultado4(){
     }
     setTimeout(() => {
         ocultar();
+
+        var numeroRandom = getRandom();
+        var opcion1 = numeroRandom[0]+1;
+        var opcion2 = numeroRandom[1]+1;
+        var opcion3 = numeroRandom[2]+1;
+        var opcion4 = numeroRandom[3]+1;
+        
+
+        document.getElementById("resultado_41").src = "img/Resultado 4/resultado-"+opcion1+".png";
+        document.getElementById("resultado_42").src = "img/Resultado 4/resultado-"+opcion2+".png";
+        document.getElementById("resultado_43").src = "img/Resultado 4/resultado-"+opcion3+".png";
+        document.getElementById("resultado_44").src = "img/Resultado 4/resultado-"+opcion4+".png";
+
+        if (opcion1 == 4){
+            document.getElementById("resultado_41").id = "resultado_40";
+            document.getElementById("resultado_44").id = "resultado_41";
+            document.getElementById("resultado_40").id = "resultado_44";
+        }
+        else if (opcion2 == 4){
+            document.getElementById("resultado_42").id = "resultado_40";
+            document.getElementById("resultado_44").id = "resultado_42";
+            document.getElementById("resultado_40").id = "resultado_44";
+        }
+        else if (opcion3 == 4){
+            document.getElementById("resultado_43").id = "resultado_40";
+            document.getElementById("resultado_44").id = "resultado_43";
+            document.getElementById("resultado_40").id = "resultado_44";
+        }   
+
         document.getElementById("bodyIndex").className = "fondo fondoResultado4";
         document.getElementById("resultado4").className = "centroTrivia animated heartBeat";
-    }, 2000);
+    }, 500);
 }
 
 function mostrarResultado5(){
-    if (this.id == "resultado_43") {
+    if (this.id == "resultado_44") {
         document.getElementById("correcto").classList.remove("ocultar");
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
     setTimeout(() => {
         ocultar();
+
+        var numeroRandom = getRandom();
+        var opcion1 = numeroRandom[0]+1;
+        var opcion2 = numeroRandom[1]+1;
+        var opcion3 = numeroRandom[2]+1;
+        var opcion4 = numeroRandom[3]+1;
+        
+
+        document.getElementById("resultado_51").src = "img/Resultado 5/resultado-"+opcion1+".png";
+        document.getElementById("resultado_52").src = "img/Resultado 5/resultado-"+opcion2+".png";
+        document.getElementById("resultado_53").src = "img/Resultado 5/resultado-"+opcion3+".png";
+        document.getElementById("resultado_54").src = "img/Resultado 5/resultado-"+opcion4+".png";
+
+        if (opcion1 == 2){
+            document.getElementById("resultado_51").id = "resultado_50";
+            document.getElementById("resultado_54").id = "resultado_51";
+            document.getElementById("resultado_50").id = "resultado_54";
+        }
+        else if (opcion2 == 2){
+            document.getElementById("resultado_52").id = "resultado_50";
+            document.getElementById("resultado_54").id = "resultado_52";
+            document.getElementById("resultado_50").id = "resultado_54";
+        }
+        else if (opcion3 == 2){
+            document.getElementById("resultado_53").id = "resultado_50";
+            document.getElementById("resultado_54").id = "resultado_53";
+            document.getElementById("resultado_50").id = "resultado_54";
+        }   
+
         document.getElementById("bodyIndex").className = "fondo fondoResultado5";
         document.getElementById("resultado5").className = "centroTrivia animated heartBeat";
-    }, 2000);
+    }, 500);
 }
 
 function mostrarRecuerda(){
