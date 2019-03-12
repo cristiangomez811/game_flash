@@ -48,7 +48,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    background:url(../img/PlayStore/icono_03.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:50%;
@@ -329,4 +329,14 @@ p {
     width: 300px;
     height: 300px;
     /* background-image: url("../img/checked.png"); */
+}
+
+.center {
+
+    margin: 1px auto;
+}
+
+.margen {
+
+    margin-top: 110px;
 }

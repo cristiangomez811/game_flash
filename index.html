@@ -37,7 +37,8 @@
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="css/animate.css">
-    <title>Football Brain</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+   <title>Football Brain</title>
 </head>
 
 <body class="fondo fondoPrincipal" id="bodyIndex">
@@ -272,20 +273,14 @@
 
     <div class="ocultar" id="interfazPuntaje">
 
-        <div class="margin">
-
-            <h1>Puntaje</h1>
-            <div id="puntaje"></div>
-
+        <div class="card center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Puntaje</h5>
+                <h6 class="card-subtitle mb-2 text-muted" id="puntaje"></h6>
+            </div>
         </div>
 
-        <div class="margin">
-
-            <!--Acá anota el total de puntaje-->
-
-        </div>
-
-        <div class="marginTrivia">
+        <div class="margen">
 
             <img src="img/back.png" id="backPuntaje">
 
@@ -295,20 +290,29 @@
 
     <div class="ocultar" id="interfazCreditos">
 
-            <div>
-    
-                <h1>Créditos</h1>
-    
+        <div class="card center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Jhon F Tamayo</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Diseñador</h6>
             </div>
-    
-            <div>
-               <p>Jhon F Tamayo</p>
-               <p>Santiago Quintero</p>
-               <p>Cristian Roman</p>
-               <br>
-               <img src="img/back.png" id="backCredito">
+        </div>
+
+        <div class="card center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Cristian Gómez</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Desarrollador</h6>
             </div>
+        </div>
+
+        <div class="card center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Santiago Quintero</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Desarrollador</h6>
+            </div>
+        </div>
+        <img src="img/back.png" id="backCredito">
     </div>
+
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 

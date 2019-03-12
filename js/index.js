@@ -158,6 +158,7 @@ function mostrarPrincipal(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoPrincipal";
     document.getElementById("divPrincipal").className = "centrado animated jello";
+    puntaje = 0;
 }
 
 function mostrarTrivia1(){
@@ -638,6 +639,12 @@ function mostrarPuntaje(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoMenu";
     document.getElementById("interfazPuntaje").className = "centroMenu animated fadeInDownBig";
+
+    if (puntaje > 13){
+
+        puntaje = 13;
+    }
+
     document.getElementById("puntaje").innerHTML = puntaje;
 }
 
