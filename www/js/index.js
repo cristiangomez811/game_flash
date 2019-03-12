@@ -66,7 +66,7 @@ var app = {
         document.getElementById("resultado_53").addEventListener("click", mostrarMenu);
         document.getElementById("resultado_54").addEventListener("click", mostrarMenu);
         document.getElementById("menu3").addEventListener("click", mostrarRecuerda);
-        document.getElementById("span_recuerda_11").addEventListener("click", mostrarFoto);
+        document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("scoreIcon").addEventListener("click", mostrarPuntaje);
@@ -102,8 +102,6 @@ var app = {
     }
 };
 
-var puntaje = 0;
-
 function ocultar(){
 
     document.getElementById("correcto").className = "ocultar";
@@ -127,10 +125,8 @@ function ocultar(){
 
 function mostrarMenu(){
     if (this.id == "resultado_54") {
-        puntaje++;
         document.getElementById("correcto").classList.remove("ocultar");
     } else if (this.id == "trivia_54") {
-        puntaje++;
         document.getElementById("correcto").classList.remove("ocultar");
     }else {
         document.getElementById("incorrecto").classList.remove("ocultar");
@@ -197,7 +193,6 @@ function mostrarTrivia2(){
 
     if (this.id == "trivia_14") {      
         document.getElementById("correcto").classList.remove("ocultar");
-        puntaje++;
     }else{
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
@@ -240,7 +235,6 @@ function mostrarTrivia2(){
 function mostrarTrivia3(){
     if (this.id == "trivia_24") {
         document.getElementById("correcto").classList.remove("ocultar");
-        puntaje++;
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
@@ -283,7 +277,6 @@ function mostrarTrivia3(){
 function mostrarTrivia4(){
     if (this.id == "trivia_34") {
         document.getElementById("correcto").classList.remove("ocultar");
-        puntaje++;
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
@@ -326,7 +319,6 @@ function mostrarTrivia4(){
 function mostrarTrivia5(){
     if (this.id == "trivia_44") {
         document.getElementById("correcto").classList.remove("ocultar");
-        puntaje++;
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
@@ -405,7 +397,6 @@ function mostrarResultado1(){
 function mostrarResultado2(){
     if (this.id == "resultado_14") {
         document.getElementById("correcto").classList.remove("ocultar");
-        puntaje++;
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
@@ -448,7 +439,6 @@ function mostrarResultado2(){
 function mostrarResultado3(){
     if (this.id == "resultado_24") {
         document.getElementById("correcto").classList.remove("ocultar");
-        puntaje++;
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
@@ -491,7 +481,6 @@ function mostrarResultado3(){
 function mostrarResultado4(){
     if (this.id == "resultado_34") {
         document.getElementById("correcto").classList.remove("ocultar");
-        puntaje++;
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
@@ -534,7 +523,6 @@ function mostrarResultado4(){
 function mostrarResultado5(){
     if (this.id == "resultado_44") {
         document.getElementById("correcto").classList.remove("ocultar");
-        puntaje++;
     } else {
         document.getElementById("incorrecto").classList.remove("ocultar");
     }
@@ -610,7 +598,6 @@ function mostrarPuntaje(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoMenu";
     document.getElementById("interfazPuntaje").className = "centroMenu animated fadeInDownBig";
-    document.getElementById("puntaje").innerHTML = "puntaje";
 }
 
  //HEAD
