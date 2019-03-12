@@ -67,6 +67,8 @@ var app = {
         document.getElementById("resultado_54").addEventListener("click", mostrarMenu);
         document.getElementById("menu3").addEventListener("click", mostrarRecuerda);
         document.getElementById("span_recuerda_11").addEventListener("click", mostrarFoto);
+        document.getElementById("span_recuerda_12").addEventListener("click", mostrarFoto);
+        document.getElementById("span_recuerda_13").addEventListener("click", mostrarFoto);
         document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("scoreIcon").addEventListener("click", mostrarPuntaje);
@@ -103,6 +105,7 @@ var app = {
 };
 
 var puntaje = 0;
+var recuerda = 0;
 
 function ocultar(){
 
@@ -144,6 +147,7 @@ function mostrarMenu(){
 
 }
 function mostrarMenuBack(){
+        recuerda = 0;
         ocultar();
         document.getElementById("bodyIndex").className = "fondo fondoMenu";
         document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
@@ -591,17 +595,41 @@ function mostrarRecuerda(){
 }
 
 function mostrarFoto(){
-    // if (this.id == "recuerda_11") {
-    if (true) {
+    if (this.id == "span_recuerda_11") {
+    // if (true) {
         document.getElementById("recuerda_11").classList.remove("esconder");
+        recuerda++;
+        puntaje++;
+        document.getElementById("span_recuerda_11").removeEventListener("click", mostrarFoto);
     }
-    // if (this.id == "recuerda_12") {
-    if (true) {
-            document.getElementById("recuerda_11").classList.remove("esconder");
+    if (this.id == "span_recuerda_12") {
+        // if (true) {
+        document.getElementById("recuerda_12").classList.remove("esconder");
+        document.getElementById("span_recuerda_12").removeEventListener("click", mostrarFoto);
+        recuerda++;
+        puntaje++;
     }
-    if (true) {
-    // if (this.id == "recuerda_13") {
-        document.getElementById("recuerda_11").classList.remove("esconder");
+    // if (true) {
+    if (this.id == "span_recuerda_13") {
+        document.getElementById("recuerda_13").classList.remove("esconder");
+        recuerda++;
+        puntaje++;
+        document.getElementById("span_recuerda_13").removeEventListener("click", mostrarFoto);
+
+    }
+    if(recuerda == 3)
+    {
+        document.getElementById("correcto").classList.remove("ocultar");
+
+        setTimeout(() => {
+            ocultar();
+            recuerda = 0;
+            document.getElementById("bodyIndex").className = "fondo fondoMenu";
+            document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
+            document.getElementById("span_recuerda_11").addEventListener("click", mostrarFoto);
+            document.getElementById("span_recuerda_12").addEventListener("click", mostrarFoto);
+            document.getElementById("span_recuerda_13").addEventListener("click", mostrarFoto);
+        }, 1500);   
     }
 }
 
@@ -610,7 +638,7 @@ function mostrarPuntaje(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoMenu";
     document.getElementById("interfazPuntaje").className = "centroMenu animated fadeInDownBig";
-    document.getElementById("puntaje").innerHTML = "puntaje";
+    document.getElementById("puntaje").innerHTML = puntaje;
 }
 
  //HEAD
