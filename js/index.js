@@ -72,15 +72,10 @@ var app = {
         document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("scoreIcon").addEventListener("click", mostrarPuntaje);
-// HEAD
-        document.getElementById("backPuntaje").addEventListener("click", mostrarMenu);
-        document.getElementById("backRecuerda").addEventListener("click", mostrarMenu);
         document.getElementById("credits").addEventListener("click", mostrarCreditos);
         document.getElementById("backCredito").addEventListener("click", mostrarPrincipal);
-
         document.getElementById("backPuntaje").addEventListener("click", mostrarMenuBack);
         document.getElementById("backRecuerda").addEventListener("click", mostrarMenuBack);
- //b4c153f0d6302202895620a5ffe5c0a65ac6805
     },
 
     // deviceready Event Handler
@@ -149,6 +144,9 @@ function mostrarMenu(){
 function mostrarMenuBack(){
         recuerda = 0;
         ocultar();
+        document.getElementById("span_recuerda_11").addEventListener("click", mostrarFoto);
+        document.getElementById("span_recuerda_12").addEventListener("click", mostrarFoto);
+        document.getElementById("span_recuerda_13").addEventListener("click", mostrarFoto);
         document.getElementById("bodyIndex").className = "fondo fondoMenu";
         document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
 }
