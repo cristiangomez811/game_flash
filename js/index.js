@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var audio, play, stop;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -76,6 +79,12 @@ var app = {
         document.getElementById("backCredito").addEventListener("click", mostrarPrincipal);
         document.getElementById("backPuntaje").addEventListener("click", mostrarMenuBack);
         document.getElementById("backRecuerda").addEventListener("click", mostrarMenuBack);
+        document.getElementById("trash").addEventListener("click", reiniciarPuntaje);
+
+        audio = document.createElement('audio');
+        audio.setAttribute('autoplay', 'autoplay');
+        audio.setAttribute('loop', 'loop');
+ //b4c153f0d6302202895620a5ffe5c0a65ac6805
     },
 
     // deviceready Event Handler
@@ -124,6 +133,10 @@ function ocultar(){
 }
 
 function mostrarMenu(){
+    
+    audio.pause();
+    audio.setAttribute('src', 'audio/Sonos.mp3');
+    audio.play();
     if (this.id == "resultado_54") {
         puntaje++;
         document.getElementById("correcto").classList.remove("ocultar");
@@ -144,15 +157,21 @@ function mostrarMenu(){
 function mostrarMenuBack(){
         recuerda = 0;
         ocultar();
+<<<<<<< HEAD
         document.getElementById("span_recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("span_recuerda_12").addEventListener("click", mostrarFoto);
         document.getElementById("span_recuerda_13").addEventListener("click", mostrarFoto);
+=======
+        audio.setAttribute('src', 'audio/Sonos.mp3');
+        audio.play();
+>>>>>>> b23d8c32a98a24966a69e3ba66d9df76e9bbebc8
         document.getElementById("bodyIndex").className = "fondo fondoMenu";
         document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
 }
 
 function mostrarPrincipal(){
 
+    audio.pause();
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoPrincipal";
     document.getElementById("divPrincipal").className = "centrado animated jello";
@@ -161,7 +180,7 @@ function mostrarPrincipal(){
 function mostrarTrivia1(){
 
     ocultar();
-    
+
     var numeroRandom = getRandom();
     var opcion1 = numeroRandom[0]+1;
     var opcion2 = numeroRandom[1]+1;
@@ -192,6 +211,10 @@ function mostrarTrivia1(){
 
     document.getElementById("bodyIndex").className = "fondo fondoTrivia1";
     document.getElementById("trivia1").className = "centroTrivia animated bounce";
+
+    audio.pause();
+    audio.setAttribute('src', 'audio/SONIDO DE PREGUNTA.mp3');
+    audio.play();
     
 }
 
@@ -236,6 +259,7 @@ function mostrarTrivia2(){
 
         document.getElementById("bodyIndex").className = "fondo fondoTrivia2";
         document.getElementById("trivia2").className = "centroTrivia animated bounce";
+        
     }, 500);
 }
 
@@ -371,7 +395,6 @@ function mostrarTrivia5(){
 function mostrarResultado1(){
 
     ocultar();
-
     var numeroRandom = getRandom();
     var opcion1 = numeroRandom[0]+1;
     var opcion2 = numeroRandom[1]+1;
@@ -402,6 +425,10 @@ function mostrarResultado1(){
 
     document.getElementById("bodyIndex").className = "fondo fondoResultado1";
     document.getElementById("resultado1").className = "centroTrivia animated heartBeat";
+
+    audio.pause();
+    audio.setAttribute('src', 'audio/SONIDO DE PREGUNTA.mp3');
+    audio.play();
 }
 
 function mostrarResultado2(){
@@ -584,12 +611,16 @@ function mostrarRecuerda(){
     document.getElementById("recuerda_11").classList.remove("esconder");
     document.getElementById("recuerda_12").classList.remove("esconder");
     document.getElementById("recuerda_13").classList.remove("esconder");
+    
+    audio.pause();
+    audio.setAttribute('src', 'audio/Turbo_Stasis.mp3');
+    audio.play();
 
     setTimeout(() => {
         document.getElementById("recuerda_11").className = "esconder";
         document.getElementById("recuerda_12").className = "esconder";
         document.getElementById("recuerda_13").className = "esconder";
-    }, 3000);
+    }, 2000);
 }
 
 function mostrarFoto(){
@@ -627,7 +658,10 @@ function mostrarFoto(){
             document.getElementById("span_recuerda_11").addEventListener("click", mostrarFoto);
             document.getElementById("span_recuerda_12").addEventListener("click", mostrarFoto);
             document.getElementById("span_recuerda_13").addEventListener("click", mostrarFoto);
-        }, 1500);   
+            audio.pause();
+            audio.setAttribute('src', 'audio/Sonos.mp3');
+            audio.play();  
+        }, 500);   
     }
 }
 
@@ -636,7 +670,17 @@ function mostrarPuntaje(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoMenu";
     document.getElementById("interfazPuntaje").className = "centroMenu animated fadeInDownBig";
-    document.getElementById("puntaje").innerHTML = puntaje;
+
+    if (puntaje > 13){
+
+        puntaje = 13;
+    }
+
+    document.getElementById("puntaje").innerHTML = puntaje; 
+
+    audio.pause();
+    audio.setAttribute('src', 'audio/Taaan taan taan.mp3');
+    audio.play();
 }
 
  //HEAD
@@ -645,6 +689,10 @@ function mostrarCreditos(){
     ocultar();
     document.getElementById("bodyIndex").className = "fondo fondoPrincipal";
     document.getElementById("interfazCreditos").className = "centroMenu animated fadeInDownBig";
+
+    audio.pause();
+    audio.setAttribute('src', 'audio/Creditos finales.mp3');
+    audio.play();
 }
 
 
@@ -653,6 +701,12 @@ function modal() {
        var ocultar = this.getElementById("ocultar");
    });
    
+}
+
+function reiniciarPuntaje(){
+
+    puntaje = 0;
+    document.getElementById("puntaje").innerHTML = puntaje;
 }
 
 function getRandom() {
