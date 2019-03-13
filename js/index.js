@@ -177,7 +177,7 @@ function mostrarPrincipal(){
 function mostrarTrivia1(){
 
     ocultar();
-    
+
     var numeroRandom = getRandom();
     var opcion1 = numeroRandom[0]+1;
     var opcion2 = numeroRandom[1]+1;
@@ -617,7 +617,7 @@ function mostrarRecuerda(){
         document.getElementById("recuerda_11").className = "esconder";
         document.getElementById("recuerda_12").className = "esconder";
         document.getElementById("recuerda_13").className = "esconder";
-    }, 3000);
+    }, 2000);
 }
 
 function mostrarFoto(){
@@ -655,7 +655,10 @@ function mostrarFoto(){
             document.getElementById("span_recuerda_11").addEventListener("click", mostrarFoto);
             document.getElementById("span_recuerda_12").addEventListener("click", mostrarFoto);
             document.getElementById("span_recuerda_13").addEventListener("click", mostrarFoto);
-        }, 1500);   
+            audio.pause();
+            audio.setAttribute('src', 'audio/Sonos.mp3');
+            audio.play();  
+        }, 500);   
     }
 }
 
