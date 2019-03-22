@@ -84,7 +84,6 @@ var app = {
         audio = document.createElement('audio');
         audio.setAttribute('autoplay', 'autoplay');
         audio.setAttribute('loop', 'loop');
- //b4c153f0d6302202895620a5ffe5c0a65ac6805
     },
 
     // deviceready Event Handler
@@ -157,14 +156,11 @@ function mostrarMenu(){
 function mostrarMenuBack(){
         recuerda = 0;
         ocultar();
-<<<<<<< HEAD
         document.getElementById("span_recuerda_11").addEventListener("click", mostrarFoto);
         document.getElementById("span_recuerda_12").addEventListener("click", mostrarFoto);
         document.getElementById("span_recuerda_13").addEventListener("click", mostrarFoto);
-=======
         audio.setAttribute('src', 'audio/Sonos.mp3');
         audio.play();
->>>>>>> b23d8c32a98a24966a69e3ba66d9df76e9bbebc8
         document.getElementById("bodyIndex").className = "fondo fondoMenu";
         document.getElementById("divMenu").className = "centroMenu animated fadeInDownBig";
 }
